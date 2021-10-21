@@ -5,8 +5,8 @@ RUN yum install -y httpd \
  unzip 
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page272/tea-flower.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip photogenic.zip
-RUN cp -rvf photogenic/* .
-RUN rm -rf photogenic photogenic.zip 
+RUN unzip tea-flower.zip
+RUN cp -rvf tea-flower/* .
+RUN rm -rf tea-flower tea-flower.zip 
 CMD ["/usr/sbin/httpd", "-D",  "FOREGROUND"]
 EXPOSE 80
